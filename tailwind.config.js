@@ -12,7 +12,19 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes: {
+        bounce: {
+          '0%': { transform: 'translateY(0em)' },
+          '50%': { transform: 'translateY(.5em)' },
+          '100%': { transform: 'translateY(0em)' },
+        },
+      },
+      animation: {
+        'bouncing': 'bounce .5s ease infinite',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animation-delay")
+  ],
 }

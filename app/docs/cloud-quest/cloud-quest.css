@@ -1,0 +1,36 @@
+.editor-textarea {
+    margin-bottom: 10px;
+    background-color: #030e00;
+    color: #12ff1e;
+    border-color: #12ff1e;
+    font-family: 'Apple II';
+    width: 98vw;
+}
+
+.cloud-quest {
+    color: #12ff1e;
+    font-size: 10pt;
+    font-family: 'Apple II';
+    line-height: 2vh;
+    background-color: #030e00;
+    text-shadow: 0 0 5px rgba(0, 255, 47, 0.471);
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+@font-face {
+    font-family: 'Apple II';
+    src: url('https://raw.githubusercontent.com/sollambert/cloud-quest/main/src/fonts/font.ttf');
+}
+
+td {
+    border-width: 1px;
+    border-color: #12ff1e;
+    border-style: solid;
+    padding: .5em;
+}
+
+table {
+    width: 100%;
+    margin-top: 1em;
+}
