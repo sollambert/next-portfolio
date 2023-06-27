@@ -1,17 +1,7 @@
 import ClientMarkdown from "@/components/ClientMarkdown";
 
-export default async function ProjectPage({ params }: { params: { slug: string } }) {
+export default function ProjectPage({ params }: { params: { slug: string } }) {
     const url = `https://raw.githubusercontent.com/sollambert/${params.slug}/main/README.md`
-
-    const getMarkdown = async (url: string) => {
-        await new Promise((resolve) => {
-            setTimeout(() => resolve(1), 1000) 
-        })
-        let response = await fetch(url, { cache: "no-cache" });
-        return response.text();
-    }
-
-    const markdown = await getMarkdown(url);
 
     const extraInfo = (slug: string) => {
         switch (slug) {
@@ -38,11 +28,12 @@ export default async function ProjectPage({ params }: { params: { slug: string }
         }
     }
 
+    // ts-expect-error Async Server Component
     return (
         <>
             <div className="m-10">
                 {extraInfo(params.slug)}
-                <ClientMarkdown className="p-10 rounded" source={markdown} />
+                <ClientMarkdown  url={url} className="p-10 rounded" />
             </div>
         </>
     );

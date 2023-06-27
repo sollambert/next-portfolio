@@ -1,6 +1,9 @@
 'use client'
 
+import { MarkdownPreviewRef } from "@uiw/react-markdown-preview";
 import dynamic from "next/dynamic";
+import { Suspense } from "react";
+import BounceLoader from "./BounceLoader";
 
 const MarkdownPreview = dynamic(
     () => import("@uiw/react-markdown-preview").then((mod) => mod.default),
@@ -8,12 +11,25 @@ const MarkdownPreview = dynamic(
 );
 
 type Props = {
-    source: string,
+    url: string,
     className?: string
 }
 
-export default function ClientMarkdown({...props} : Props) {
+const getMarkdown = async (url: string) => {
+    // await new Promise((resolve) => {
+    //     setTimeout(() => resolve(1), 1000)
+    // })
+    let response = await fetch(url, { cache: "no-cache" });
+    return response.text();
+}
+
+
+export default async function ClientMarkdown({ ...props }: Props) {
+    const markdown = await getMarkdown(props.url);
+
     return (
-        <MarkdownPreview {...props} />
+        <Suspense fallback={<BounceLoader />}>
+            <MarkdownPreview source={markdown} {...props} />
+        </Suspense>
     )
 }

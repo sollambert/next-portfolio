@@ -30,7 +30,7 @@ export default function CloudQuestDocsPage() {
                 <tbody>
                     <tr>
                         <td>
-                            "add_interaction" : {'{Object}'}
+                            {"add_interaction"} : {'{Object}'}
                         </td>
                         <td>
                             Adds a new interaction to the current interactable.
@@ -38,7 +38,7 @@ export default function CloudQuestDocsPage() {
                     </tr>
                     <tr>
                         <td>
-                            "condition" : {'{Object}'}
+                            {"condition"} : {'{Object}'}
                         </td>
                         <td>
                             Allows a condition tied to a global variable. The keys of the contained object are the names for global variables to check and the values are the values they must equal for the conditional to be true.
@@ -46,7 +46,7 @@ export default function CloudQuestDocsPage() {
                     </tr>
                     <tr>
                         <td>
-                            "condition_message" : {"\"String\""}
+                            {"condition_message"} : {"\"String\""}
                         </td>
                         <td>
                             The message to send to the player in the case that the condition is unfulfilled.
@@ -54,23 +54,23 @@ export default function CloudQuestDocsPage() {
                     </tr>
                     <tr>
                         <td>
-                            "new_description" : {"\"String\""}
+                            {"new_description"} : {"\"String\""}
                         </td>
                         <td>
-                            The new string to set the current associated interactable's description to.
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            "new_exits" : {"Array[\"String\"]"}
-                        </td>
-                        <td>
-                            Sets the current room's exits to the provided array of strings.
+                            {" The new string to set the current associated interactable's description to."}
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            "persistent" : {"true, false"}
+                            {"new_exits"} : {"Array[\"String\"]"}
+                        </td>
+                        <td>
+                            {"Sets the current room's exits to the provided array of strings."}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {"persistent"}: {"true, false"}
                         </td>
                         <td>
                             Dictates whether or not the interaction is removed from the current interactable after handling.
@@ -78,7 +78,7 @@ export default function CloudQuestDocsPage() {
                     </tr>
                     <tr>
                         <td>
-                            "set_var" : {"{Object}"}
+                            {"set_var"} : {"{Object}"}
                         </td>
                         <td>
                             Sets the corresponding global variables to the key and value pairs within the object provided.
@@ -90,6 +90,7 @@ export default function CloudQuestDocsPage() {
             <textarea
                 className="editor-textarea"
                 style={{ height: "35vh" }}
+                readOnly={true}
                 value=
                 {JSON.stringify(
                     [
@@ -112,7 +113,7 @@ export default function CloudQuestDocsPage() {
             />
             <h2>Exits</h2>
             <p>The exits of the room are described as an array of strings and may contain spaces.</p>
-            <p>Example: ["exit 1", "exit 2"]</p>
+            <p>{"Example: [\"exit 1\", \"exit 2\"]"}</p>
             <h2>Items</h2>
             <p>To create an item, a name and a description are required.
                 An associated room ID can be provided to ensure that the newly created item will appear in that room during gameplay, but this is not strictly necessary and an item can be introduced into gameplay through interactable logic.</p>
