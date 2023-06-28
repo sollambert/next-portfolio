@@ -33,6 +33,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <>
             <div className="m-10">
                 {extraInfo(params.slug)}
+                {/* @ts-expect-error Async Server Component */}
                 <ClientMarkdown  url={url} className="p-10 rounded" />
             </div>
         </>

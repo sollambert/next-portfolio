@@ -1,6 +1,5 @@
 'use client'
 
-import { MarkdownPreviewRef } from "@uiw/react-markdown-preview";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import BounceLoader from "./BounceLoader";
