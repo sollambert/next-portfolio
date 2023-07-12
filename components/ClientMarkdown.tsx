@@ -15,9 +15,9 @@ type Props = {
 }
 
 const getMarkdown = async (url: string) => {
-    // await new Promise((resolve) => {
-    //     setTimeout(() => resolve(1), 1000)
-    // })
+    await new Promise((resolve) => {
+        setTimeout(() => resolve(1), 1000)
+    })
     let response = await fetch(url, { cache: "no-cache" });
     return response.text();
 }
