@@ -1,7 +1,8 @@
 import ClientMarkdown from "@/components/ClientMarkdown";
+import { githubRawUrl } from "@/lib/constants";
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
-    const url = `https://raw.githubusercontent.com/sollambert/${params.slug}/main/README.md`
+    const url = `${githubRawUrl}${params.slug}/main/README.md`
 
     const extraInfo = (slug: string) => {
         switch (slug) {
@@ -33,7 +34,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <>
             <div className="m-10">
                 {extraInfo(params.slug)}
-                {/* @ts-expect-error Async Server Component */}
                 <ClientMarkdown  url={url} className="p-10 rounded" />
             </div>
         </>
