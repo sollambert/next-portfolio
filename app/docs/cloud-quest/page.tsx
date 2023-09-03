@@ -89,8 +89,9 @@ export default function CloudQuestDocsPage() {
             <p>Example: </p>
             <textarea
                 className="editor-textarea"
-                style={{ height: "35vh" }}
+                style={{ height: "35vh", width: "100%", resize: "none" }}
                 readOnly={true}
+                
                 value=
                 {JSON.stringify(
                     [
