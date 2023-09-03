@@ -19,7 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} min-h-screen`}>
         <Header />
-        <main className="flex flex-col justify-between p-24 h-full">
+        <main
+          className="flex flex-col justify-between p-24 min-h-full"
+        >
           {children}
         </main>
         <Footer />

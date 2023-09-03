@@ -15,7 +15,8 @@ type Props = {
 }
 
 const getMarkdown = async (url: string) => {
-    let response = await fetch(url, { cache: "no-cache" });
+    // let response = await fetch(url, { cache: "no-cache" });
+    let response = await fetch(url, {cache: "default"});
     return response.text();
 }
 
