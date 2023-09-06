@@ -20,7 +20,7 @@ export default function FooterLink(props: Props) {
                     -&gt;
                 </span>
             </h2>
-            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+            <p className={`m-0 max-w-[30ch] text-sm opacity-50 hidden md:flex`}>
                 {props.description}
             </p>
         </Link>
