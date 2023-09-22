@@ -14,6 +14,10 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+
+  .header-image {
+    filter: invert(92%) sepia(15%) saturate(4420%) hue-rotate(346deg) brightness(100%) contrast(96%);
+  }
 }
 
 body {

@@ -39,10 +39,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         {extraInfo(params.slug)?.name}
                     </div>
                     <Image
-                        src="/github-mark-white.svg"
+                        src="/github-black.svg"
                         alt="Github-logo"
-                        // className="dark:invert"
-                        width={32}
+                        className="dark:invert"
+                        width={24}
                         height={24}
                         priority
                     />

@@ -34,7 +34,7 @@ export default async function DemosPage() {
             {data && data.map((project, index) => {
                 return (
                     <ProjectLink key={index} name={project.name} displayName={project.displayName} directory="demos">
-                        <pre className="text-base text-gray-300" style={{whiteSpace: "pre-wrap"}}>
+                        <pre className="text-base text-gray-700 dark:text-gray-300" style={{whiteSpace: "pre-wrap"}}>
                             {project.description}
                         </pre>
                     </ProjectLink>

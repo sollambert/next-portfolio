@@ -4,7 +4,7 @@ export default function AboutPage() {
             <h1 className="text-2xl text-blue-400 font-bold">
                 About
             </h1>
-            <pre className="text-base text-gray-300" style={{ whiteSpace: "pre-wrap" }}>
+            <pre className="text-base text-gray-700 dark:text-gray-300" style={{ whiteSpace: "pre-wrap" }}>
 {`This page was honestly a huge undertaking, rivaling some of my projects detailed within the site.
 
 Built on Next.js, I've created this application to act as an easy-to-use directory of all of my projects and exhibition of my various programming adventures.

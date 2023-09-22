@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Header() {
     return (
-        <header className="border-white border-solid h-16 w-screen flex items-center justify-between text-yellow-400 text-2xl font-bold p-6">
+        <header className="border-white border-solid h-16 w-screen flex items-center justify-between dark:text-yellow-400 text-2xl font-bold p-6">
             <div>
                 <HeaderLink url="/">
                     Home
@@ -16,12 +16,12 @@ export default function Header() {
                         Github
                     </div>
                     <Image
-                        src="/github-mark-white.svg"
+                        className="header-image"
+                        src="/github-black.svg"
                         alt="Github-logo"
                         // className="dark:invert"
                         width={32}
-                        height={24}
-                        style={{ filter: "invert(8%) sepia(15%) saturate(4420%) hue-rotate(346deg) brightness(100%) contrast(96%)" }}
+                        height={32}
                         priority
                     />
                 </HeaderLink>
@@ -30,12 +30,12 @@ export default function Header() {
                         Linkedin
                     </div>
                     <Image
+                        className="header-image"
                         src="/linkedin-black.svg"
-                        alt="Github-logo"
+                        alt="Linkedin-logo"
                         // className="dark:invert"
                         width={32}
-                        height={24}
-                        style={{ filter: "invert(92%) sepia(15%) saturate(4420%) hue-rotate(346deg) brightness(100%) contrast(96%)" }}
+                        height={32}
                         priority
                     /></HeaderLink>
             </div>

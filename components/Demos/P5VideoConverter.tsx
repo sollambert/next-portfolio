@@ -1,9 +1,10 @@
 'use client'
 
+import { useEffect } from "react";
 import { ReactP5Wrapper } from "react-p5-wrapper";
 
 export default function P5VideoConverter() {
-    const density = "    _.,-=+:;!?$W#@Ñ"
+    let density = "    _.,-=+:;!?$W#@Ñ"
 
     function sketch(p5: any) {
         let video: any;
@@ -45,6 +46,22 @@ export default function P5VideoConverter() {
             }
         }
     }
+
+    const getMediaQueryPreference = () => {
+        const mediaQuery = "(prefers-color-scheme: dark)";
+        const mql = window.matchMedia(mediaQuery);
+        const hasPreference = typeof mql.matches === "boolean";
+        if (hasPreference) {
+            return mql.matches ? "dark" : "light";
+        }
+    };
+
+    useEffect(() => {
+        let mode = getMediaQueryPreference();
+        if (mode === "light") {
+            density = "Ñ@#W$?!;:+=-,._    ";
+        }
+    }, []);
 
     return (
         <div className="self-center">
