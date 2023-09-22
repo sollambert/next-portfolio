@@ -10,7 +10,7 @@ export default function Footer() {
                     description="All of my best projects" />
                 <FooterLink
                     display="Tech-Demos"
-                    url="/tech"
+                    url="/demos"
                     description="Various tech demos to show off smaller projects" />
                 <FooterLink
                     display="About"

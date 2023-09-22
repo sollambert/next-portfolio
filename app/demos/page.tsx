@@ -1,0 +1,41 @@
+import ProjectLink from "@/components/ProjectLink";
+
+type ResponseData = {
+    message: string,
+    data: string
+}
+
+type Project = {
+    name: string,
+    displayName: string,
+    description: string
+}
+
+const fetcher = (url: string, headers: Object) => fetch(url, headers).then(res => res.json());
+
+async function getData() {
+    const res: ResponseData = await fetcher('http://localhost:3000/api/demos',
+        {
+            method: "GET",
+            cache: "no-store"
+        });
+    return JSON.parse(res.data);
+}
+
+export default async function DemosPage() {
+    const data: Array<Project> = await getData();
+    console.log(typeof data)
+    return (
+        <div className="border-white border-solid m-8 flex flex-col items-start justify-evenly text-blue-400 text-2xl font-bold">
+            {data && data.map(project => {
+                return (
+                    <ProjectLink name={project.name} displayName={project.displayName} directory="demos">
+                        <pre className="text-base text-gray-300" style={{whiteSpace: "pre-wrap"}}>
+                            {project.description}
+                        </pre>
+                    </ProjectLink>
+                )
+            })}
+        </div>
+    )
+}

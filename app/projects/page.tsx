@@ -29,10 +29,10 @@ export default async function ProjectsPage() {
         <div className="border-white border-solid m-8 flex flex-col items-start justify-evenly text-blue-400 text-2xl font-bold">
             {data && data.map(project => {
                 return (
-                    <ProjectLink name={project.name} displayName={project.displayName}>
-                        <p className="text-base text-gray-300">
+                    <ProjectLink name={project.name} displayName={project.displayName} directory="projects">
+                        <pre className="text-base text-gray-300" style={{whiteSpace: "pre-wrap"}}>
                             {project.description}
-                        </p>
+                        </pre>
                     </ProjectLink>
                 )
             })}
