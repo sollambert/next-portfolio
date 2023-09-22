@@ -2,40 +2,52 @@
 
 import Readme from "@/components/Readme";
 import CloudQuest from "@/components/ProjectHeaders/CloudQuest";
-import { githubRawUrl } from "@/lib/constants";
+import { githubUrl, githubRawUrl } from "@/lib/constants";
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
-    const url = `${githubRawUrl}${params.slug}/main/README.md`
+
+    const projectUrl = `${githubUrl}${params.slug}`
+    const readmeUrl = `${githubRawUrl}${params.slug}/main/README.md`
     const [readmeView, setReadmeView] = useState(false);
     const extraInfo = (slug: string) => {
         switch (slug) {
             case 'cloud-quest':
                 return (
-                    <CloudQuest />
+                    {name: "CloudQuest", cb: <CloudQuest />}
                 )
             case 'dnd-buddy':
                 return (
-                    <>
-                        D&D-Buddy
-                    </>
+                    {name: "D&D Buddy", cb: undefined}
                 )
             case 'omi-live':
                 return (
-                    <>
-                        Omi-Live
-                    </>
+                    {name: "Omi Live", cb: undefined}
                 )
             default:
                 <></>
         }
     }
 
-    // ts-expect-error Async Server Component
     return (
         <>
             <div className="ml-10 mr-10">
-                {extraInfo(params.slug)}
+                <Link className="flex flex-row items-center space-between" href={projectUrl}>
+                    <div className="text-3xl font-bold mr-2">
+                        {extraInfo(params.slug)?.name}
+                    </div>
+                    <Image
+                        src="/github-mark-white.svg"
+                        alt="Github-logo"
+                        // className="dark:invert"
+                        width={32}
+                        height={24}
+                        priority
+                    />
+                </Link>
+                {extraInfo(params.slug)?.cb}
             </div>
             <div className="ml-10 mr-10 mt-2">
                 {readmeView ?
@@ -45,7 +57,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                             onClick={() => setReadmeView(!readmeView)}>
                             ReadMe v
                         </button>
-                        <Readme url={url} />
+                        <Readme url={readmeUrl} />
                     </>
                     :
                     <button

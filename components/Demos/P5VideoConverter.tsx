@@ -47,12 +47,12 @@ export default function P5VideoConverter() {
     }
 
     return (
-        <>
+        <div className="self-center">
             {window != undefined &&     
                 <ReactP5Wrapper sketch={sketch} />
             }
-            <pre id="ascii-pre" style={{lineHeight: ".5em"}}>
+            <pre id="ascii-pre" className="xs: text-xxs sm:text-xs lg:text-sm xl:text-base"  style={{lineHeight: ".5em"}}>
             </pre>
-        </>
+        </div>
     )
 }

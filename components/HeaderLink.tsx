@@ -8,6 +8,8 @@ type Props = {
 
 export default function HeaderLink(props : React.PropsWithChildren<Props>) {
     return (
-        <Link href={props.url}>{props.children}</Link>
+        <div className="text-3xl font-bold mr-4 ml-4">
+            <Link className="flex flex-row items-center space-between" href={props.url}>{props.children}</Link>
+        </div>
     )
 }
