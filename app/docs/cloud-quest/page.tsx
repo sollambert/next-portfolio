@@ -2,7 +2,7 @@ import "./cloud-quest.css";
 
 export default function CloudQuestDocsPage() {
     return (
-        <div className="cloud-quest">
+        <div className="cloud-quest" style={{overflow: "auto"}}>
 
             <h2>
                 Game Info
