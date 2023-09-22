@@ -7,7 +7,7 @@
     {
         "name": "omi-live",
         "displayName": "Omi Live",
-        "description": "test"
+        "description": "A self-hosted streaming solution with a focus on live shopping. Using a third party program to capture video and audio, users are able to livestream from their PC or other device to a web server that broadcasts to all other connected users.\nFeatures include a live chat, a featured product carousel, handy access to affiliate links, and mod permissions for monitoring user interaction.\nTechnologies used include React, Redux, Express, Socket.io, Node-Media-Server, and Postgres."
     },
     {
         "name": "dnd-buddy",
