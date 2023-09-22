@@ -14,7 +14,7 @@ type Project = {
 const fetcher = (url: string, headers: Object) => fetch(url, headers).then(res => res.json());
 
 async function getData() {
-    const res: ResponseData = await fetcher('http://localhost:3000/api/projects',
+    const res: ResponseData = await fetcher(`http://localhost:${process.env.API_PORT}/api/projects`,
         {
             method: "GET",
             cache: "no-store"
