@@ -27,9 +27,9 @@ export default async function DemosPage() {
     console.log(typeof data)
     return (
         <div className="border-white border-solid m-8 flex flex-col items-start justify-evenly text-blue-400 text-2xl font-bold">
-            {data && data.map(project => {
+            {data && data.map((project, index) => {
                 return (
-                    <ProjectLink name={project.name} displayName={project.displayName} directory="demos">
+                    <ProjectLink key={index} name={project.name} displayName={project.displayName} directory="demos">
                         <pre className="text-base text-gray-300" style={{whiteSpace: "pre-wrap"}}>
                             {project.description}
                         </pre>
