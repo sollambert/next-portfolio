@@ -14,12 +14,16 @@ type Project = {
 const fetcher = (url: string, headers: Object) => fetch(url, headers).then(res => res.json());
 
 async function getData() {
-    const res: ResponseData = await fetcher('http://localhost:3000/api/demos',
-        {
-            method: "GET",
-            cache: "no-store"
-        });
-    return JSON.parse(res.data);
+    try {
+        const res: ResponseData = await fetcher('http://localhost:3000/api/demos',
+            {
+                method: "GET",
+                cache: "no-store"
+            });
+        return JSON.parse(res.data);
+    } catch {
+        return [];
+    }
 }
 
 export default async function DemosPage() {
