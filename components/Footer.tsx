@@ -11,7 +11,7 @@ export default function Footer() {
                 <FooterLink
                     display="Tech-Demos"
                     url="/tech"
-                    description="Varios tech demos to show off smaller projects" />
+                    description="Various tech demos to show off smaller projects" />
                 <FooterLink
                     display="About"
                     url="/about"
