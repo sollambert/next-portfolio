@@ -5,13 +5,16 @@ type Props = {
     displayName: string
 }
 
-export default function ProjectLink(props : Props) {
+export default function ProjectLink(props: React.PropsWithChildren<Props>) {
 
 
 
     return (
-        <div>
-            <Link href={`projects/${props.name}`}>{props.displayName}</Link>
+        <div className="px-5 py-4 rounded-lg border border-transparent transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+            <Link href={`projects/${props.name}`}>
+                {props.displayName}
+                {props.children}
+            </Link>
         </div>
     )
 }
