@@ -23,7 +23,7 @@ export default function CloudQuest() {
                     rel="noopener noreferrer"
                 >
                     <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-2">
-                        Live Deployment
+                        {`Live Deployment (desktop only)`}
                     </button>
                 </Link>
             </div>

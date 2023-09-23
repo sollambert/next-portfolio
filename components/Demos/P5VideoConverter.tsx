@@ -19,6 +19,7 @@ export default function P5VideoConverter() {
             video.autoplay();
             video.loop();
             video.size(170, 96)
+            // video.style("width: fit-content(100em); height: fit-content(100em)");
             video.volume(0);
         }
 
@@ -33,7 +34,6 @@ export default function P5VideoConverter() {
                     const g = video.pixels[pixelIndex + 1];
                     const b = video.pixels[pixelIndex + 2];
                     const avg = ((r + g + b) / 3);
-                    // console.log(`${r} ${g} ${b}`)
                     const charIndex = p5.floor(p5.map(avg, 0, 255, 0, density.length));
                     const c = density.charAt(charIndex);
                     newLine += c;
@@ -68,7 +68,7 @@ export default function P5VideoConverter() {
             {window != undefined &&     
                 <ReactP5Wrapper sketch={sketch} />
             }
-            <pre id="ascii-pre" className="xs: text-xxs sm:text-xs lg:text-sm xl:text-base"  style={{lineHeight: ".5em"}}>
+            <pre id="ascii-pre" className="text-xxxs sm:text-xxs lg:text-xs xl:text-sm"  style={{lineHeight: ".5em"}}>
             </pre>
         </div>
     )

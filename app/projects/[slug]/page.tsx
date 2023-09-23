@@ -1,7 +1,7 @@
 'use client'
 
 import Readme from "@/components/Readme";
-import CloudQuest from "@/components/ProjectHeaders/CloudQuest";
+import CloudQuest from "@/components/Projects/CloudQuest";
 import { githubUrl, githubRawUrl } from "@/lib/constants";
 import { useState } from "react";
 import Link from "next/link";

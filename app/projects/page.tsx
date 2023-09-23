@@ -34,9 +34,9 @@ export default async function ProjectsPage() {
             {data && data.map((project, index) => {
                 return (
                     <ProjectLink key={index} name={project.name} displayName={project.displayName} directory="projects">
-                        <pre className="text-base text-gray-700 dark:text-gray-300" style={{whiteSpace: "pre-wrap"}}>
+                        <p className="text-base font-normal text-gray-700 dark:text-gray-300" style={{whiteSpace: "pre-wrap"}}>
                             {project.description}
-                        </pre>
+                        </p>
                     </ProjectLink>
                 )
             })}

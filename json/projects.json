@@ -12,6 +12,6 @@
     {
         "name": "dnd-buddy",
         "displayName": "D&D Buddy",
-        "description": "A helpful tool for any dungeon master, D&D Buddy allows users to organize campaigns, create encounters, manage player characters, access the DnD 5E SRD Api in an easy to navigate manner, and connect to ChatGPT to help generate flavor text for NPCs and descriptions for other world objects.\nThis project has two separate versions, one for a cloud hosted version with authentication and multi-user configurations and one that can be installed as a local desktop application utilizing Rust's Tauri framework."
+        "description": "A helpful tool for any dungeon master, D&D Buddy allows users to organize campaigns, create encounters, manage player characters, access the DnD 5E SRD Api in an easy to navigate manner, and connect to ChatGPT to help generate flavor text for NPCs and descriptions for other world objects.\nThis project has two separate versions, one for a cloud hosted environment with authentication and multi-user configurations and one that can be installed as a local desktop application utilizing Rust's Tauri framework."
     }
 ]
