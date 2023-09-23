@@ -14,7 +14,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
     return (
         <>
-            <div className="ml-10 mr-10">
+            <div className="ml-10 mr-10 mt-4">
                 {demo(params.slug)}
             </div>
         </>

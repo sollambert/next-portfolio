@@ -1,4 +1,5 @@
 import FooterLink from "./FooterLink";
+import Image from "next/image";
 
 export default function Footer() {
     return (
@@ -9,14 +10,22 @@ export default function Footer() {
                     url="/projects"
                     description="All of my best projects" />
                 <FooterLink
-                    display="Tech-Demos"
+                    display="Demos"
                     url="/demos"
-                    description="Various tech demos to show off smaller projects" />
+                    description="Various tech demos showing off smaller ideas" />
                 <FooterLink
                     display="About"
                     url="/about"
                     description="How this portfolio was created" />
             </div>
+            <Image
+                src="/Tux.svg"
+                alt="secret tux"
+                width={32}
+                height={32}
+                hidden={true}
+                priority
+            />
         </footer>
     )
 }

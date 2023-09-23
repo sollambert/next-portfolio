@@ -33,7 +33,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
     return (
         <>
-            <div className="ml-10 mr-10">
+            <div className="ml-10 mr-10 mt-4">
                 <Link className="flex flex-row items-center space-between" href={projectUrl}>
                     <div className="text-3xl font-bold mr-2">
                         {extraInfo(params.slug)?.name}
