@@ -9,7 +9,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     <P5VideoConverter/>
                 )
             case 'sudoku':
-                return <Sudoku url={`http://localhost:${process.env.API_PORT}/api/sudoku`}/>
+                return <Sudoku/>
             default:
                 <></>
         }
