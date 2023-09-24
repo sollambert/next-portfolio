@@ -3,5 +3,10 @@
         "name": "p5-ascii",
         "displayName": "P5 Ascii Video Conversion",
         "description": "Created using p5.js, this software renders a video file as ASCII text. By iterating through the individual frames of the video file at an arbitrary resolution and averaging the color value of the pixels within these regions, we can assign each region a specific 'lightness' value with a corresponding ASCII character based on whitespace of the character."
+    },
+    {
+        "name": "sudoku",
+        "displayName": "Sudoku",
+        "description": "A simple sudoku game"
     }
 ]

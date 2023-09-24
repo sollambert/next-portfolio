@@ -1,4 +1,5 @@
 import P5VideoConverter from "@/components/Demos/P5VideoConverter";
+import Sudoku from "@/components/Demos/Sudoku";
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
     const demo = (slug: string) => {
@@ -7,6 +8,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 return (
                     <P5VideoConverter/>
                 )
+            case 'sudoku':
+                return <Sudoku/>
             default:
                 <></>
         }
