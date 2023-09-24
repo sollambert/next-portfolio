@@ -1,8 +1,12 @@
 'use client'
 
-import { ChangeEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function Sudoku() {
+type Props = {
+    url: string
+}
+
+export default function Sudoku(props: Props) {
     let [sudoku, setSudoku] = useState([
         ['','','','','','','','',''],
         ['','','','','','','','',''],
@@ -24,11 +28,12 @@ export default function Sudoku() {
     
     async function getData() {
         try {
-            const res: ResponseData = await fetcher(`http://localhost:3000/api/sudoku`,
+            const res: ResponseData = await fetcher(props.url,
             {
                 method: "GET",
                 cache: "no-store"
             });
+            console.log(res.data)
             return JSON.parse(res.data);
         } catch {
             return [];
