@@ -20,15 +20,12 @@ export default function SudokuBoard(props: Props) {
         ['','','','','','','','','']
     ]);
 
+    let [message, setMessage] = useState("");
+    // let [prevTimeout, setPrevTimeout] = useState(new NodeJS.Timeout);
+
     useEffect(() => {
         setSudoku(props.sudoku);
     }, []);
-
-    let [message, setMessage] = useState("");
-
-    useEffect(() => {
-        setTimeout(() => {setMessage("")}, 5000)
-    }, [message]);
 
     const handleChange = (x: number, y: number, value: string) => {
         if (!isNaN(Number(value))) {
@@ -45,11 +42,13 @@ export default function SudokuBoard(props: Props) {
     const validateSudoku = () => {
         let success = true;
         for (let y in sudoku) {
-            let sum = 0;
+            let rowSum = 0;
+            let colSum = 0;
             for (let x in sudoku[y]) {
-                sum += Number(sudoku[y][x]);
+                rowSum += Number(sudoku[y][x]);
+                colSum += Number(sudoku[x][y]);
             }
-            if (sum != 45) {
+            if (rowSum != 45 || colSum != 45) {
                 success = false;
                 break;
             }
@@ -59,7 +58,10 @@ export default function SudokuBoard(props: Props) {
         } else {
             setMessage("That doesn't seem right...");
         }
+        // clearTimeout(prevTimeout)
+        // setPrevTimeout(setTimeout(() => {setMessage("")}, 3000));
     }
+
     return (
         <>
             <div className="text-xl flex flex-col">
