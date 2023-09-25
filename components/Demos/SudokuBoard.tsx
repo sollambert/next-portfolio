@@ -28,7 +28,7 @@ export default function SudokuBoard(props: Props) {
     }, []);
 
     const handleChange = (x: number, y: number, value: string) => {
-        if (!isNaN(Number(value))) {
+        if (!isNaN(Number(value)) && value != "0") {
             let tempSudoku = [...sudoku];
             tempSudoku[y][x] = value ? value : '';
             setSudoku(tempSudoku);
@@ -81,7 +81,7 @@ export default function SudokuBoard(props: Props) {
                                 } else if ((x + 1) % 3 == 1) {
                                     colBorder = "border-l-black dark:border-l-white ";
                                 }
-                                return <input readOnly className={rowBorder + colBorder + "w-6 h-6 mx-0.5 text-sm text-center md:w-8 md:text-base md:m-1 md:h-8"} key={x} value={value} onKeyDown={e => handleChange(x, y, e.key)} />
+                                return <input className={rowBorder + colBorder + "w-6 h-6 mx-0.5 text-sm text-center md:w-8 md:text-base md:m-1 md:h-8"} key={x} value={value} onChange={() => {}} onKeyDown={e => handleChange(x, y, e.key)} />
                             })}
                         </div>)
                 })}
