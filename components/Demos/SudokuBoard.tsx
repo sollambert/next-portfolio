@@ -81,7 +81,7 @@ export default function SudokuBoard(props: Props) {
                                 } else if ((x + 1) % 3 == 1) {
                                     colBorder = "border-l-black dark:border-l-white ";
                                 }
-                                return <input className={rowBorder + colBorder + "w-6 h-6 mx-0.5 text-sm text-center md:w-8 md:text-base md:m-1 md:h-8"} key={x} value={value} onChange={() => {}} onKeyDown={e => handleChange(x, y, e.key)} />
+                                return <input className={rowBorder + colBorder + "w-6 h-6 mx-0.5 text-sm text-center md:w-8 md:text-base md:m-1 md:h-8"} key={x} value={value} onChange={() => {}} onKeyPress={e => handleChange(x, y, e.key)} />
                             })}
                         </div>)
                 })}
