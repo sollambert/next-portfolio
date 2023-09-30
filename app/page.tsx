@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="m-12 flex flex-row justify-between items-start w-auto">
-      <div className="lg:w-1/2 xl:w-1/3">
+    <div className="m-12 h-full flex flex-row justify-between items-start w-auto">
+      <div className="lg:w-1/2 h-full">
         <h1 className="text-5xl font-bold">
           Welcome!
         </h1>
@@ -18,14 +18,15 @@ My languages include Rust, C++, C#, Python, JS, TS, Bash, and SQL. Rust has quic
 If you have any questions, comments, or inquiries, please reach out through Linkedin.`}
         </p>
       </div>
-      <div className="hidden xl:flex flex-col w-1/3">
-        {/* <picture className="w-96">
+      <div className="hidden xl:flex flex-col w-1/3 justify-items-center items-center content-center"
+        style={{minHeight: "50vh", maxHeight: "70vh", height: "100%"}}>
+        <picture className="w-96 mb-6"><img className="rounded" src="https://media.licdn.com/dms/image/D5603AQE8Q6RE-td6_A/profile-displayphoto-shrink_800_800/0/1678806941868?e=1701302400&v=beta&t=ev1_ziyFAcTN6x1l_Ems8phA5RU9S5f4NdInOlx5QRc" alt="Linkedin Profile Picture"/></picture>
+        <picture className="w-96 mb-6">
           <Link href="https://www.codewars.com/users/sollambert">
             <img src="https://www.codewars.com/users/sollambert/badges/large" alt="Codewars badge" />
           </Link>
         </picture>
-        <picture className="w-96"><img src="https://github-readme-stats.vercel.app/api?username=sollambert&show_icons=true&count_private=true&theme=tokyonight"/></picture>
-        <picture className="w-96"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sollambert&langs_count=6&hide_title=true&layout=compact&hide=HTML,CSS&theme=vision-friendly-dark" /></picture> */}
+        <picture className="w-96 mb-6"><img src="https://github-readme-stats.vercel.app/api?username=sollambert&show_icons=true&count_private=true&theme=tokyonight"/></picture>
       </div>
     </div>
   )
