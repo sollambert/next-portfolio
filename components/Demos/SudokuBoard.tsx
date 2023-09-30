@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
 type Props = {
     sudoku: Array<Array<string>>
@@ -27,7 +27,8 @@ export default function SudokuBoard(props: Props) {
         setSudoku(props.sudoku);
     }, []);
 
-    const handleChange = (x: number, y: number, value: string) => {
+    const inputHandler = (x: number, y: number, e: any) => {
+        let value = e.nativeEvent.data;
         if (!isNaN(Number(value)) && value != "0") {
             let tempSudoku = [...sudoku];
             tempSudoku[y][x] = value ? value : '';
@@ -81,7 +82,7 @@ export default function SudokuBoard(props: Props) {
                                 } else if ((x + 1) % 3 == 1) {
                                     colBorder = "border-l-black dark:border-l-white ";
                                 }
-                                return <input className={rowBorder + colBorder + "w-6 h-6 mx-0.5 text-sm text-center md:w-8 md:text-base md:m-1 md:h-8"} key={x} value={value} onChange={() => {}} onKeyPress={e => handleChange(x, y, e.key)} />
+                                return <input className={rowBorder + colBorder + "w-6 h-6 mx-0.5 text-center md:w-8 md:m-1 md:h-8"} key={x} value={value} onChange={() => {}} onInput={e => inputHandler(x, y, e)} />
                             })}
                         </div>)
                 })}
