@@ -30,7 +30,7 @@ export default async function ProjectsPage() {
     const data: Array<Project> = await getData();
     console.log(typeof data)
     return (
-        <div className="border-white border-solid m-8 flex flex-col items-start justify-evenly text-blue-400 text-2xl font-bold">
+        <div className="border-white border-solid m-8 flex flex-col items-start justify-evenly text-blue-400 text-2xl font-bold lg:w-1/2 xl:w-1/3">
             {data && data.map((project, index) => {
                 return (
                     <ProjectLink key={index} name={project.name} displayName={project.displayName} directory="projects">

@@ -21,7 +21,6 @@ export default function SudokuBoard(props: Props) {
     ]);
 
     let [message, setMessage] = useState("");
-    // let [prevTimeout, setPrevTimeout] = useState(new NodeJS.Timeout);
 
     useEffect(() => {
         setSudoku(props.sudoku);
@@ -41,7 +40,6 @@ export default function SudokuBoard(props: Props) {
     }
 
     const keyDownHandler = (x: number, y: number, key: string) => {
-        console.log(key);
         let element = undefined;
         if (key == "w" || key == "ArrowUp") {
             element = document.getElementById(`su-${x}-${y-1}`);

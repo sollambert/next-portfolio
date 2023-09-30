@@ -1,6 +1,6 @@
 export default function AboutPage() {
     return (
-        <div className="m-12">
+        <div className="m-12 lg:w-1/2 xl:w-1/3">
             <h1 className="text-2xl text-blue-400 font-bold">
                 About
             </h1>
