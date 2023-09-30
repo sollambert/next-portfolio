@@ -40,6 +40,26 @@ export default function SudokuBoard(props: Props) {
         }
     }
 
+    const keyDownHandler = (x: number, y: number, key: string) => {
+        console.log(key);
+        let element = undefined;
+        if (key == "w" || key == "ArrowUp") {
+            element = document.getElementById(`su-${x}-${y-1}`);
+        }
+        if (key == "a" || key == "ArrowLeft") {
+            element = document.getElementById(`su-${x-1}-${y}`);
+        }
+        if (key == "s" || key == "ArrowDown") {
+            element = document.getElementById(`su-${x}-${y+1}`);
+        }
+        if (key == "d" || key == "ArrowRight") {
+            element = document.getElementById(`su-${x+1}-${y}`);
+        }
+        if (element) {
+            element.focus();
+        }
+    }
+
     const validateSudoku = () => {
         let success = true;
         for (let y in sudoku) {
@@ -59,8 +79,6 @@ export default function SudokuBoard(props: Props) {
         } else {
             setMessage("That doesn't seem right...");
         }
-        // clearTimeout(prevTimeout)
-        // setPrevTimeout(setTimeout(() => {setMessage("")}, 3000));
     }
 
     return (
@@ -82,7 +100,7 @@ export default function SudokuBoard(props: Props) {
                                 } else if ((x + 1) % 3 == 1) {
                                     colBorder = "border-l-black dark:border-l-white ";
                                 }
-                                return <input className={rowBorder + colBorder + "w-6 h-6 mx-0.5 text-center md:w-8 md:m-1 md:h-8"} key={x} value={value} onChange={() => {}} onInput={e => inputHandler(x, y, e)} />
+                                return <input id={`su-${x}-${y}`} className={rowBorder + colBorder + "w-6 h-6 mx-0.5 text-center md:w-8 md:m-1 md:h-8 caret-transparent"} key={x} value={value} onChange={() => {}} onKeyDown={e => keyDownHandler(x, y, e.key)} onInput={e => inputHandler(x, y, e)} />
                             })}
                         </div>)
                 })}
