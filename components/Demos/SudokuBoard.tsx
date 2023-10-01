@@ -105,7 +105,10 @@ export default function SudokuBoard(props: Props) {
                 })}
             </div>
             <div className="flex flex-row items-center">
-                <button className="m-1 bg-white dark:bg-black hover:bg-gray-100 text-gray-800 dark:text-gray-100 font-semibold py-2 px-4 border border-gray-400 rounded shadow" onClick={validateSudoku}>Validate</button>
+                <button
+                    className="m-1 bg-white dark:bg-black hover:bg-stone-200 dark:hover:bg-stone-700 text-gray-800 dark:text-gray-100 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                    onClick={validateSudoku}
+                >Validate</button>
                 <p className="m-2 font-bold">{message}</p>
             </div>
         </>
