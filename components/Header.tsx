@@ -4,7 +4,13 @@ import Image from "next/image";
 
 export default function Header() {
     return (
-        <header className="border-white border-solid h-16 w-screen flex items-center justify-between text-2xl font-bold pt-4 pr-6">
+        <header className="
+            pt-4 pr-4
+            border-white border-solid
+            h-16 w-screen
+            text-2xl font-bold
+            flex justify-between
+        ">
             <div className="hidden md:flex">
                 <HeaderLink url="/">
                     <Image
@@ -18,9 +24,15 @@ export default function Header() {
                     />
                 </HeaderLink>
             </div>
-            <div className="flex flex-row justify-evenly w-full">
+            <div className="
+                w-full
+                flex flex-row items-center justify-center md:justify-end
+            ">
                 <HeaderLink url={githubUrl}>
-                    <div className="text-3xl font-bold mr-2 hidden md:flex">
+                    <div className="
+                        text-3xl font-bold mr-2
+                        hidden md:flex
+                    ">
                         Github
                     </div>
                     <Image
@@ -34,7 +46,10 @@ export default function Header() {
                     />
                 </HeaderLink>
                 <HeaderLink url={linkedinUrl}>
-                    <div className="text-3xl font-bold mr-2 hidden md:flex">
+                    <div className="
+                        mr-2
+                        text-3xl font-bold
+                        hidden md:flex">
                         Linkedin
                     </div>
                     <Image

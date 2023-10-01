@@ -53,7 +53,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 {readmeView ?
                     <>
                         <button
-                            className={"bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"}
+                            className="
+                                bg-white hover:bg-gray-100
+                                text-gray-800 font-semibold
+                                py-2 px-4
+                                border border-gray-400 rounded shadow"
                             onClick={() => setReadmeView(!readmeView)}>
                             ReadMe v
                         </button>
@@ -61,7 +65,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     </>
                     :
                     <button
-                        className={"bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"}
+                        className="
+                            bg-white hover:bg-gray-100
+                            text-gray-800 font-semibold
+                            py-2 px-4
+                            border border-gray-400 rounded shadow"
                         onClick={() => setReadmeView(!readmeView)}>
                         {"ReadMe >"}
                     </button>}
