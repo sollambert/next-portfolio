@@ -32,10 +32,6 @@ export default function SudokuBoard(props: Props) {
             let tempSudoku = [...sudoku];
             tempSudoku[y][x] = value ? value : '';
             setSudoku(tempSudoku);
-        } else if (value == "Backspace" || value == "Delete") {
-            let tempSudoku = [...sudoku];
-            tempSudoku[y][x] = '';
-            setSudoku(tempSudoku);
         }
     }
 
@@ -52,6 +48,11 @@ export default function SudokuBoard(props: Props) {
         }
         if (key == "d" || key == "ArrowRight") {
             element = document.getElementById(`su-${x+1}-${y}`);
+        }
+        if (key == "Backspace" || key == "Delete") {
+            let tempSudoku = [...sudoku];
+            tempSudoku[y][x] = '';
+            setSudoku(tempSudoku);
         }
         if (element) {
             element.focus();
