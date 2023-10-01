@@ -5,11 +5,11 @@ import Image from "next/image";
 export default function Header() {
     return (
         <header className="border-white border-solid h-16 w-screen flex items-center justify-between text-2xl font-bold pt-4 pr-6">
-            <div>
+            <div className="hidden md:flex">
                 <HeaderLink url="/">
                     <Image
                         // className="header-image"
-                        src="/home.svg"
+                        src="/icons/home.svg"
                         alt="Home icon"
                         className="dark:invert"
                         width={48}
@@ -18,14 +18,14 @@ export default function Header() {
                     />
                 </HeaderLink>
             </div>
-            <div className="flex flex-row">
+            <div className="flex flex-row justify-evenly w-full">
                 <HeaderLink url={githubUrl}>
                     <div className="text-3xl font-bold mr-2 hidden md:flex">
                         Github
                     </div>
                     <Image
                         // className="header-image"
-                        src="/github-black.svg"
+                        src="/icons/github-black.svg"
                         alt="Github-logo"
                         className="dark:invert"
                         width={32}
@@ -39,7 +39,7 @@ export default function Header() {
                     </div>
                     <Image
                         // className="header-image"
-                        src="/linkedin-black.svg"
+                        src="/icons/linkedin-black.svg"
                         alt="Linkedin-logo"
                         className="dark:invert"
                         width={32}

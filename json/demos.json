@@ -7,6 +7,6 @@
     {
         "name": "sudoku",
         "displayName": "Sudoku",
-        "description": "A simple sudoku game. Fill in the blanks and then validate to see if you got everything correct.\n\nNavigate through the grid with WASD/↑←↓→\nRemove a number with Backspace/Delete"
+        "description": "A simple sudoku game. Fill in the blanks and then validate to see if you got everything correct.\n\nNavigate through the grid with WASD/↑←↓→ and remove a number with Backspace/Delete."
     }
 ]

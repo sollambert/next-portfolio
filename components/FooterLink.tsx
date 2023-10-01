@@ -11,8 +11,6 @@ export default function FooterLink(props: Props) {
         <Link
             href={props.url}
             className="group rounded-lg border border-transparent mr-1 px-5 md:py-1 lg:py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            // target="_blank"
-            // rel="noopener noreferrer"
         >
             <h2 className={`sm:mb-1 md:mb-3 text-2xl font-semibold`}>
                 {props.display}
