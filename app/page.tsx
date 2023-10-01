@@ -25,7 +25,7 @@ If you have any questions, comments, or inquiries, please reach out through Link
             <img src="https://www.codewars.com/users/sollambert/badges/large" alt="Codewars badge" />
           </Link>
         </picture>
-        <picture className="w-auto max-w-md"><img src="https://github-readme-stats.vercel.app/api?username=sollambert&show_icons=true&count_private=true&theme=tokyonight"/></picture>
+        {/* <picture className="w-auto max-w-md"><img src="https://github-readme-stats.vercel.app/api?username=sollambert&show_icons=true&count_private=true&theme=tokyonight"/></picture> */}
       </div>
     </div>
   )
