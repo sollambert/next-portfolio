@@ -2,7 +2,7 @@
     {
         "name": "cloud-quest",
         "displayName": "Cloud-Quest",
-        "description": "CloudQuest is the solo capstone project I completed to finish up my time at Prime Digital Academy.\nBoth a text-based adventure game and the platform that allows users to create their own similar adventures, CloudQuest is a demonstration of the skills I learned during my time at Prime.\nUsing the game editor, users can create their own rooms, items, ASCII-rendered graphics, and game logic to create their own adventure using simple JSON objects.\nTechnologies used include React, Redux, Express, Postgres, and p5.js"
+        "description": "CloudQuest is the solo capstone project I completed to finish my full-stack engineering certification from Prime Digital Academy.\nBoth a text-based adventure game and the platform that allows users to create their own similar adventures, CloudQuest is a demonstration of the skills I learned during my training at Prime.\nUsing the game editor, users can create their own rooms, items, ASCII-rendered graphics, and game logic to create their own adventure using simple JSON objects.\nTechnologies used include React, Redux, Express, Postgres, and p5.js"
     },
     {
         "name": "omi-live",
