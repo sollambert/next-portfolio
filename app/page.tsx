@@ -16,11 +16,11 @@ export default function Home() {
           "
           style={{ whiteSpace: "pre-wrap" }}
         >
-          {`I'm Solomon and this is my developer portfolio page. Within, you'll find my favorite projects I've put together on display as well as smaller tech demos. Both are necesssary to display the breadth of my knowledge and work.
+          {`I'm Solomon and this is my developer portfolio page. Within, you'll find my favorite projects I've put together on display as well as smaller tech demos. Both are necessary to display the breadth of my knowledge and work.
 
 Currently, I'm seeking a position in the full stack dev or DevOps career path. I work best with smaller, fast-paced teams and have a passion for cranking code, but I can fly solo just as well. One of my favorite things about small team and solo development is really having to dive deep to expand your knowledge to fill all the gaps and release a fantastic product.
 
-I am experienced in the following languages: Rust, C++, C#, Python, JS, TS, Bash, and SQL. Rust has quickly become my favorite language. I'm not sure if it's the feeling of traversing a new frontier of software development and having to figure out the solution to my issues with little hand holding that drives me to love Rust so much, but it does make every project a new learning experience. If I have an issue in other language I'm able to search on StackOverflow for a solution, but with Rust that doesn't seem to be the case. The lack of available answers and having to provide novel solutions to my own problems just makes finishing that feature I've been working on feel so much better.
+I am experienced in the following languages: Rust, C++, C#, Python, JS, TS, Bash, and SQL. Rust has quickly become my favorite language. I'm not sure if it's the feeling of traversing a new frontier of software development and having to figure out the solution to my issues with little hand holding that drives me to love Rust so much, but it does make every project a new learning experience. If I have an issue in other languages I'm able to search on StackOverflow for a solution, but with Rust that doesn't seem to be the case. The lack of available answers and having to provide novel solutions to my own problems just makes finishing that feature I've been working on feel so much better.
 
 If you have any questions, comments, or inquiries, please reach out through Linkedin.`}
         </p>
