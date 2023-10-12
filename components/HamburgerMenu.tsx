@@ -59,6 +59,7 @@ export default function HamburgerMenu() {
                                     width={32}
                                     height={32}
                                     priority
+                                    role="button"
                                     onClick={clickHandler} />
                             </div>
                         </div>
@@ -72,6 +73,7 @@ export default function HamburgerMenu() {
                     width={32}
                     height={32}
                     priority
+                    role="button"
                     onClick={clickHandler}
                 />}
         </>
