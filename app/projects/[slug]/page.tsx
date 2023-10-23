@@ -26,6 +26,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 return (
                     {name: "Omi Live", cb: undefined}
                 )
+            case 'night-tremors':
+                return (
+                    {name: "Night Tremors", cb: undefined}
+                )
             default:
                 <></>
         }
