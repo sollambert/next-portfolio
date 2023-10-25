@@ -16,6 +16,10 @@ export default function Footer() {
                         url="/demos"
                         description="Various tech demos showing off smaller ideas" />
                     <FooterLink
+                        display="3D Models"
+                        url="/models"
+                        description="A gallery of my work with 3D modeling" />
+                    <FooterLink
                         display="About"
                         url="/about"
                         description="How this portfolio was created" />

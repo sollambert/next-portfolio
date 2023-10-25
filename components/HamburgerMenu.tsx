@@ -18,7 +18,7 @@ export default function HamburgerMenu() {
             {open ?
                 <>
                     <div className={`fixed z-10 top-0 inset-0 h-screen w-screen opacity-50 bg-stone-600 dark:bg-black`} />
-                    <div className={`flex flex-col justify-between items-center px-4 py-4 fixed z-20 top-0 inset-0 w-min h-full bg-stone-100 dark:bg-black`}>
+                    <div className={`flex flex-col justify-between items-center px-4 py-4 fixed z-20 top-0 inset-0 w-fit h-full bg-stone-100 dark:bg-black`}>
                         <Image
                             src="/icons/hamburger.svg"
                             alt="Hamburger icon"
@@ -35,6 +35,10 @@ export default function HamburgerMenu() {
                                 <HamburgerLink
                                     display="Demos"
                                     url="/demos"
+                                    onClick={clickHandler} />
+                                <HamburgerLink
+                                    display="3D Models"
+                                    url="/models"
                                     onClick={clickHandler} />
                                 <HamburgerLink
                                     display="About"

@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen flex flex-col`}>
         <Header />
         <main
-          className="mb-auto"
+          className="mb-auto h-full"
         >
           {children}
         </main>
