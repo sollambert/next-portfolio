@@ -3,5 +3,10 @@
         "name": "soda-can",
         "displayName": "Soda Can",
         "description": "A low poly, PSX era graphics soda can"
+    },
+    {
+        "name": "takeout-container",
+        "displayName": "Takeout Container",
+        "description": "A low poly chinese takeout container"
     }
 ]
