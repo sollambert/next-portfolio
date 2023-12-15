@@ -1,12 +1,17 @@
 [
     {
-        "name": "soda-can",
-        "displayName": "Soda Can",
-        "description": "A low poly, PSX era graphics soda can"
+        "name": "mushroom",
+        "displayName": "Mushroom",
+        "description": "Low poly fantasy setting mushroom"
     },
     {
         "name": "takeout-container",
         "displayName": "Takeout Container",
-        "description": "A low poly chinese takeout container"
+        "description": "Low poly chinese takeout container"
+    },
+    {
+        "name": "soda-can",
+        "displayName": "Soda Can",
+        "description": "Low poly soda can"
     }
 ]

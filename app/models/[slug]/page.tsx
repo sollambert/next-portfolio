@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber'
 import { Environment, OrbitControls } from "@react-three/drei";
 import { githubRawUrl } from "@/lib/constants";
 import { SodaCan } from '@/components/Models/Soda-Can'
+import { Mushroom } from '@/components/Models/Mushroom'
 import { TakeoutContainer } from '@/components/Models/Takeout-Container'
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
@@ -20,6 +21,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             case 'takeout-container':
                 return (
                     <TakeoutContainer glbUrl={glbUrl} height="100%"/>
+                )
+            case 'mushroom':
+                return (
+                    <Mushroom glbUrl={glbUrl} height="100%"/>
                 )
         }
         return <></>
