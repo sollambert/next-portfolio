@@ -32,7 +32,7 @@ If you have any questions, comments, or inquiries, please reach out through Link
         <div className="flex flex-col items-center">
           <picture className="w-auto mb-4 max-w-md">
             <img className="rounded"
-              src="https://media.licdn.com/dms/image/D5603AQE8Q6RE-td6_A/profile-displayphoto-shrink_800_800/0/1678806941868?e=1701302400&v=beta&t=ev1_ziyFAcTN6x1l_Ems8phA5RU9S5f4NdInOlx5QRc"
+              src="https://media.licdn.com/dms/image/D5603AQE8Q6RE-td6_A/profile-displayphoto-shrink_800_800/0/1678806947028?e=1707955200&v=beta&t=3BaqUYYzmBCucvQoZYFs-boEtU0Yd0GaOjEJV2fAbTk"
               alt="Linkedin Profile Picture"
             />
           </picture>
